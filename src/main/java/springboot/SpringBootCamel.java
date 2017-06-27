@@ -1,30 +1,27 @@
 package springboot;
 
 import org.apache.camel.CamelContext;
-import org.apache.camel.ProducerTemplate;
-import org.apache.camel.builder.RouteBuilder;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.context.annotation.Bean;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 
-@SpringBootApplication
+
 @RestController
 public class SpringBootCamel  {
 
     @Autowired
     CamelContext camelContext;
 
-    public static void main(String args[]){
-        SpringApplication.run(SpringBootCamel.class, args);
+    @RequestMapping("/")
+    public String index() {
+        return "Hello, World";
     }
 
-    @Bean
+
+       /*@Bean
     public RouteBuilder createRouteBuilder() throws Exception {
         return new RouteBuilder() {
             @Override
@@ -40,7 +37,8 @@ public class SpringBootCamel  {
 
             }
         };
-    }
+    }*/
+
 
 
     @RequestMapping(value="/delay1")
@@ -77,7 +75,7 @@ public class SpringBootCamel  {
 
     }
 
-    @RequestMapping("/hello")
+    /*@RequestMapping("/hello")
     public String hello (@RequestParam(value="accountId") String accountId ){
 
         //Endpoint endpoint, Object body, String header, Object headerValue
@@ -85,6 +83,6 @@ public class SpringBootCamel  {
         producerTemplate.requestBodyAndHeader("direct:start", null, accountId, accountId);
         return "delay2 done with "+ accountId;
 
-    }
+    }*/
 
 }
