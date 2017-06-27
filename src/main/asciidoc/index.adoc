@@ -1,0 +1,72 @@
+Duet API Documentation -
+=======================
+
+
+This file documents HTTP requests and sample responses to access the AUTH token to
+
+1) Get the PEEK data
+
+2) Redeem Duet points
+
+
+Authentication Token Request Details :
+======================================
+
+*cURL command :*
+
+include::{snippets}/hello/curl-request.adoc[]
+
+*HTTP request:*
+
+include::{snippets}/hello/http-request.adoc[]
+
+*Sample HTTP response:*
+
+include::{snippets}/hello/http-response.adoc[]
+
+
+PEEK Service Details :
+======================
+
+*Delay curl command below*
+
+include::{snippets}/delay1/curl-request.adoc[]
+
+*Delay HTTP request:*
+
+include::{snippets}/delay1/http-request.adoc[]
+
+*Delay HTTP response:*
+
+include::{snippets}/delay1/http-response.adoc[]
+
+AUTH Service Details (SUCESS):
+==============================
+
+*Delay curl command below*
+
+include::{snippets}/duet_valid/curl-request.adoc[]
+
+*Delay HTTP request:*
+
+include::{snippets}/duet_valid/http-request.adoc[]
+
+*Delay HTTP response:*
+
+include::{snippets}/duet_valid/http-response.adoc[]
+
+
+AUTH Service Details (EXPIRED TOKEN):
+====================================
+
+*Delay curl command below*
+
+include::{snippets}/duet_invalid/curl-request.adoc[]
+
+*Delay HTTP request:*
+
+include::{snippets}/duet_invalid/http-request.adoc[]
+
+*Delay HTTP response:*
+
+include::{snippets}/duet_invalid/http-response.adoc[]
